@@ -1,4 +1,4 @@
-# Cartola-Authentication-Middleware
+# AuthenticationMiddleware
 
 To start your application server:
 
