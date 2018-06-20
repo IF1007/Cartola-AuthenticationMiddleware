@@ -1,7 +1,7 @@
 
 module.exports = {
-    loginHost: 'http://localhost:3001',
-    bypassHost: 'http://localhost:3003',
+    loginHost: 'http://login:3000',
+    bypassHost: 'http://processor:3000',
     port: '3002',
     secretKey: 'the-most-secret-key-of-the-world'
 }

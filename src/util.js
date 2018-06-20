@@ -47,7 +47,7 @@ module.exports = {
   bypass: (req, res) => {
     getBypassHost()
       .then(bypassHost => {
-        const host = JSON.parse(gsanHost)
+        const host = bypassHost
         const url = req.url.substring(0, req.url.indexOf('?'))
         const options = {
           method: req.method,
@@ -65,7 +65,10 @@ module.exports = {
         }
         return rp(options)
       })
-      .then(body => res.status(200).send(JSON.parse(body)))
+      .then(body => {
+        console.log(body)
+        return res.status(200).send(body)
+      })
       .catch(err => {
         console.log(err.error)
         res.status(err.statusCode).send(err.error)
